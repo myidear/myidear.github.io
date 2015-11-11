@@ -13,6 +13,10 @@ Github Page的设置方法一：在Repository的根目录下面（项目的根�
 <meta property="og:site_name" content="国庆's Blog">
 <meta property="og:description" content="恩，这里就不在讲述购买域名的方法了。国内购买域名建议去 “万网”，“美橙互联”等域名供应商。国外“GoDaddy”，其他的我也不太清楚了。
 Github Page的设置方法一：在Repository的根目录下面（项目的根目录），新建一个CNAME的文件（注：没有后缀）里面写入你要绑定的域名如：iread.io保存退出即可。">
+<meta property="og:image" content="http://yoursite.com/2015/08/22/hexo-gutde-4/Hexo01.png">
+<meta property="og:image" content="http://yoursite.com/2015/08/22/hexo-gutde-4/Hexo02.png">
+<meta property="og:image" content="http://yoursite.com/2015/08/22/hexo-gutde-4/Hexo03.png">
+<meta property="og:image" content="http://yoursite.com/2015/08/22/hexo-gutde-4/Hexo04.png">
 <meta property="og:updated_time" content="2015-11-11T04:41:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo系列教程: (四)将独立域名与GitHub Pages的空间绑定">
@@ -242,8 +246,8 @@ Github Page的设置方法一：在Repository的根目录下面（项目的根�
         <p>恩，这里就不在讲述购买域名的方法了。国内购买域名建议去 “万网”，“美橙互联”等域名供应商。国外“GoDaddy”，其他的我也不太清楚了。</p>
 <h1 id="Github_Page的设置">Github Page的设置</h1><p>方法一：在<strong>Repository</strong>的根目录下面（<em>项目的根目录</em>），新建一个<strong>CNAME</strong>的文件（注：没有后缀）里面写入你要绑定的域名如：<strong>iread.io</strong>保存退出即可。<br><a id="more"></a><br>方法二：在你本地的<strong>Hexo</strong>项目根目录下找到<strong>source</strong>目录，在<strong>source</strong>根目录下创建<strong>CNAME</strong>文件注：没有后缀）里面写入你要绑定的域名如：<strong>iread.io</strong>保存退出即可。</p>
 <h1 id="DNS设置">DNS设置</h1><p>在写搭建这个Blog的时候我也参考了很多文章，但是不知道为什么每篇文章都推荐<strong>DNSPod</strong>，这点我还是比较随意的。</p>
-<p>这里使用 <strong>GoDaddy</strong>进行介绍。登录<strong><a href="https://www.godaddy.com/" target="_blank" rel="external">GoDaddy</a></strong>官网。<br><br>选择你要使用的域名，进行DNS管理<br><br><strong>DNS ZONE FILE</strong>添加需要的记录。需要添加两条A记录，一条CNAME记录，如果去使用<strong>DNSPod</strong>还需要删除原来的NS记录，换上<strong>DNSPod</strong>提供的NS地址。</p>
-<p>这两个地址是GitHub提供的。如果哪天Blog登陆不了了。可以去<strong><a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/" target="_blank" rel="external">GitHub Page</a></strong>查看最新的IP即可。<br><br><strong>HOST</strong>填写 www，<strong>POINTS TO</strong>填写你的 <strong>Git用户名.github.io</strong>。<br></p>
+<p>这里使用 <strong>GoDaddy</strong>进行介绍。登录<strong><a href="https://www.godaddy.com/" target="_blank" rel="external">GoDaddy</a></strong>官网。<br><img src="/2015/08/22/hexo-gutde-4/Hexo01.png" alt="Hexo01.png" title=""><br>选择你要使用的域名，进行DNS管理<br><img src="/2015/08/22/hexo-gutde-4/Hexo02.png" alt="Hexo02.png" title=""><br><strong>DNS ZONE FILE</strong>添加需要的记录。需要添加两条A记录，一条CNAME记录，如果去使用<strong>DNSPod</strong>还需要删除原来的NS记录，换上<strong>DNSPod</strong>提供的NS地址。</p>
+<p>这两个地址是GitHub提供的。如果哪天Blog登陆不了了。可以去<strong><a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/" target="_blank" rel="external">GitHub Page</a></strong>查看最新的IP即可。<br><img src="/2015/08/22/hexo-gutde-4/Hexo03.png" alt="Hexo03.png" title=""><br><strong>HOST</strong>填写 www，<strong>POINTS TO</strong>填写你的 <strong>Git用户名.github.io</strong>。<br><img src="/2015/08/22/hexo-gutde-4/Hexo04.png" alt="Hexo04.png" title=""></p>
 <h1 id="搭建完成">搭建完成</h1><p>至此，独立博客就算搭建完成，如有问题请在下留言。</p>
 
       

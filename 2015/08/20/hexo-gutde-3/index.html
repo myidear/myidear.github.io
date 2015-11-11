@@ -21,6 +21,10 @@
 阮一峰 - 喜欢写Blog的人，会经历三个阶段
 
 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间">
+<meta property="og:image" content="http://yoursite.com/2015/08/20/hexo-gutde-3/Hexo01.png">
+<meta property="og:image" content="http://yoursite.com/2015/08/20/hexo-gutde-3/Hexo02.png">
+<meta property="og:image" content="http://yoursite.com/2015/08/20/hexo-gutde-3/Hexo03.png">
+<meta property="og:image" content="http://yoursite.com/2015/08/20/hexo-gutde-3/Hexo04.png">
 <meta property="og:updated_time" content="2015-11-11T04:40:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo系列教程: (三)基于GitHub Page的Hexo搭建">
@@ -251,7 +255,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <img src="/2015/08/20/hexo-gutde-3/Hexo01.png" alt="Hexo01.png" title="">
 <h1 id="前言">前言</h1><hr>
 <p> 个人博客是个人持续性的日记或评论, 它是最传统常见的博客, 它们成为了一种反映生活的方法或艺术创作, 编写博客可以抒发感情，也可以帮助他人. 相信很多人都写过Blog, 但我们总是希望有更加简洁，便捷的写作方式。Hexo就是其中之一，使用MarkDown语法，让你更注重文章内容。</p>
 <blockquote>
@@ -265,7 +269,7 @@
 <h1 id="GitHub_Page_是什么？">GitHub Page 是什么？</h1><hr>
 <p>GitHub Pages本用于介绍托管在GitHub的项目， 不过，由于他的空间免费稳定，用来做搭建一个博客再好不过了。</p>
 <blockquote>
-<p>github Pages可以被认为是用户编写的、托管在github上的静态网页。<br></p>
+<p>github Pages可以被认为是用户编写的、托管在github上的静态网页。<br><img src="/2015/08/20/hexo-gutde-3/Hexo02.png" alt="Hexo02.png" title=""></p>
 <hr>
 </blockquote>
 <h1 id="GitHub_设置">GitHub 设置</h1><hr>
@@ -278,10 +282,10 @@
 <h3 id="1-_配置SSh_key：">1. 配置SSh key：</h3><p>首先我们需要检查你电脑上现有的ssh key：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure></p>
 <p>如果提示：<em>“No such file or directory”</em> 说明你是第一次使用git。</p>
 <h3 id="2-_生成新的SSH_Key：">2. 生成新的SSH Key：</h3><figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="char">$ </span>ssh-keygen -t rsa -<span class="class">C</span> <span class="comment">"you@youremail.com"</span></span><br></pre></td></tr></table></figure>
-<p>注意：Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):（回车就好），<br>Enter passphrase (empty for no passphrase):（回车，不需要输入密码）<br>Enter same passphrase again:（回车不需要输入密码）<br>因为<strong>Hexo</strong>的自动部署如果有密码的话会部署失败<br><br>当出现如图所示的时候就是成功了<br>注：忽略我在Enter file in which to save the key(/Users/your_user_directory/.ssh/id_rsa):的 <strong>~</strong> 直接回车保存在默认路径。</p>
+<p>注意：Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):（回车就好），<br>Enter passphrase (empty for no passphrase):（回车，不需要输入密码）<br>Enter same passphrase again:（回车不需要输入密码）<br>因为<strong>Hexo</strong>的自动部署如果有密码的话会部署失败<br><img src="/2015/08/20/hexo-gutde-3/Hexo03.png" alt="此图仅供参考" title="此图仅供参考"><br>当出现如图所示的时候就是成功了<br>注：忽略我在Enter file in which to save the key(/Users/your_user_directory/.ssh/id_rsa):的 <strong>~</strong> 直接回车保存在默认路径。</p>
 <h3 id="3-_添加SSH_Key到GitHub">3. 添加SSH Key到GitHub</h3><p>在本机设置SSH Key之后，需要添加到GitHub上，以完成SSH链接的设置。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cd ~<span class="regexp">/.ssh/</span> &amp;&amp; ls</span><br></pre></td></tr></table></figure></p>
 <p>可以看到此目录下的文件：<code>id_rsa</code>  <code>id_rsa.pub</code><br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cat id_rsa.pub</span><br></pre></td></tr></table></figure></p>
-<p>如图所示：将文件内容全部复制下来<br><br>登陆<strong><a href="http://www.github.com/" target="_blank" rel="external">GitHub</a></strong>官网: Account Settings —&gt; SSH keys —&gt; Add SSH keys<br>如图所示：<br></p>
+<p>如图所示：将文件内容全部复制下来<br><img src="/2015/08/20/hexo-gutde-3/Hexo04.png" alt="Hexo04.png" title=""><br>登陆<strong><a href="http://www.github.com/" target="_blank" rel="external">GitHub</a></strong>官网: Account Settings —&gt; SSH keys —&gt; Add SSH keys<br>如图所示：<br></p>
 <h3 id="4-_测试是否成功">4. 测试是否成功</h3><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh -<span class="constant">T</span> git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure>
 <p>如果是以下提示：“Hi myidear! You’ve successfully authenticated, but GitHub does not provide shell access.”<br>证明你配置成功了。</p>
 <h3 id="5-_设置用户信息">5. 设置用户信息</h3><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="keyword">global</span> user.name <span class="string">"myidear"</span>   <span class="preprocessor">#GitHub用户名</span></span><br><span class="line">$ git config --<span class="keyword">global</span> user.email  <span class="string">"myidear@gmail.com"</span>   <span class="preprocessor">#填写自己的邮箱</span></span><br></pre></td></tr></table></figure>

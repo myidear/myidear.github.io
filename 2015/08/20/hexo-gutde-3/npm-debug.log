@@ -1,0 +1,122 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\AppCan\\AppCanStudioEnterprise\\HDK\\emulator\\mas\\node.exe',
+1 verbose cli   'C:\\AppCan\\AppCanStudioEnterprise\\HDK\\emulator\\mas\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'hexo-deployer-git',
+1 verbose cli   '–save' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.15
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'hexo-deployer-git@0.0.4', null ]
+6 verbose cache add name=undefined spec="hexo-deployer-git@0.0.4" args=["hexo-deployer-git@0.0.4",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'hexo-deployer-git@0.0.4',
+7 verbose parsed url   path: 'hexo-deployer-git@0.0.4',
+7 verbose parsed url   href: 'hexo-deployer-git@0.0.4' }
+8 verbose cache add name="hexo-deployer-git" spec="0.0.4" args=["hexo-deployer-git","0.0.4"]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: '0.0.4',
+9 verbose parsed url   path: '0.0.4',
+9 verbose parsed url   href: '0.0.4' }
+10 verbose addNamed [ 'hexo-deployer-git', '0.0.4' ]
+11 verbose addNamed [ '0.0.4', '0.0.4' ]
+12 verbose cache add [ '–save', null ]
+13 verbose cache add name=undefined spec="–save" args=["–save",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: '–save',
+14 verbose parsed url   path: '–save',
+14 verbose parsed url   href: '–save' }
+15 silly lockFile 23475fa0-hexo-deployer-git-0-0-4 hexo-deployer-git@0.0.4
+16 verbose lock hexo-deployer-git@0.0.4 C:\Users\国庆\AppData\Roaming\npm-cache\23475fa0-hexo-deployer-git-0-0-4.lock
+17 silly lockFile 38d7024e-save –save
+18 verbose lock –save C:\Users\国庆\AppData\Roaming\npm-cache\38d7024e-save.lock
+19 silly lockFile 38d7024e-save –save
+20 silly lockFile 38d7024e-save –save
+21 verbose url raw hexo-deployer-git/0.0.4
+22 verbose url resolving [ 'https://registry.npmjs.org/', './hexo-deployer-git/0.0.4' ]
+23 verbose url resolved https://registry.npmjs.org/hexo-deployer-git/0.0.4
+24 info trying registry request attempt 1 at 19:09:44
+25 verbose etag "B49UCMRO567V3PSRJHJOORKP0"
+26 http GET https://registry.npmjs.org/hexo-deployer-git/0.0.4
+27 verbose addNamed [ '–save', '' ]
+28 verbose addNamed [ null, '*' ]
+29 silly lockFile 0fa5ff4a-save –save@
+30 verbose lock –save@ C:\Users\国庆\AppData\Roaming\npm-cache\0fa5ff4a-save.lock
+31 silly addNameRange { name: '–save', range: '*', hasData: false }
+32 verbose url raw –save
+33 verbose url resolving [ 'https://registry.npmjs.org/', './%E2%80%93save' ]
+34 verbose url resolved https://registry.npmjs.org/%E2%80%93save
+35 info trying registry request attempt 1 at 19:09:44
+36 http GET https://registry.npmjs.org/%E2%80%93save
+37 http 304 https://registry.npmjs.org/hexo-deployer-git/0.0.4
+38 silly registry.get cb [ 304,
+38 silly registry.get   { date: 'Wed, 11 Nov 2015 11:09:42 GMT',
+38 silly registry.get     via: '1.1 varnish',
+38 silly registry.get     'cache-control': 'max-age=60',
+38 silly registry.get     etag: '"B49UCMRO567V3PSRJHJOORKP0"',
+38 silly registry.get     age: '0',
+38 silly registry.get     connection: 'keep-alive',
+38 silly registry.get     'x-served-by': 'cache-itm7421-ITM',
+38 silly registry.get     'x-cache': 'MISS',
+38 silly registry.get     'x-cache-hits': '0',
+38 silly registry.get     'x-timer': 'S1447240182.304185,VS0,VE191',
+38 silly registry.get     vary: 'Accept' } ]
+39 verbose etag hexo-deployer-git/0.0.4 from cache
+40 silly lockFile 23475fa0-hexo-deployer-git-0-0-4 hexo-deployer-git@0.0.4
+41 silly lockFile 23475fa0-hexo-deployer-git-0-0-4 hexo-deployer-git@0.0.4
+42 http 404 https://registry.npmjs.org/%E2%80%93save
+43 silly registry.get cb [ 404,
+43 silly registry.get   { 'content-type': 'application/json',
+43 silly registry.get     'cache-control': 'max-age=0',
+43 silly registry.get     'content-length': '69',
+43 silly registry.get     'accept-ranges': 'bytes',
+43 silly registry.get     date: 'Wed, 11 Nov 2015 11:09:42 GMT',
+43 silly registry.get     via: '1.1 varnish',
+43 silly registry.get     age: '0',
+43 silly registry.get     connection: 'keep-alive',
+43 silly registry.get     'x-served-by': 'cache-itm7427-ITM',
+43 silly registry.get     'x-cache': 'MISS',
+43 silly registry.get     'x-cache-hits': '0',
+43 silly registry.get     'x-timer': 'S1447240182.304804,VS0,VE531' } ]
+44 silly addNameRange number 2 { name: '–save', range: '*', hasData: true }
+45 silly addNameRange versions [ undefined, [] ]
+46 error TypeError: Cannot read property 'latest' of undefined
+46 error     at next (C:\AppCan\AppCanStudioEnterprise\HDK\emulator\mas\node_modules\npm\lib\cache.js:744:35)
+46 error     at C:\AppCan\AppCanStudioEnterprise\HDK\emulator\mas\node_modules\npm\lib\cache.js:732:5
+46 error     at saved (C:\AppCan\AppCanStudioEnterprise\HDK\emulator\mas\node_modules\npm\node_modules\npm-registry-client\lib\get.js:148:7)
+46 error     at C:\AppCan\AppCanStudioEnterprise\HDK\emulator\mas\node_modules\npm\node_modules\graceful-fs\polyfills.js:133:7
+46 error     at Object.oncomplete (fs.js:107:15)
+47 error If you need help, you may report this *entire* log,
+47 error including the npm and node versions, at:
+47 error     <http://github.com/npm/npm/issues>
+48 error System Windows_NT 6.2.9200
+49 error command "C:\\AppCan\\AppCanStudioEnterprise\\HDK\\emulator\\mas\\node.exe" "C:\\AppCan\\AppCanStudioEnterprise\\HDK\\emulator\\mas\\node_modules\\npm\\bin\\npm-cli.js" "install" "hexo-deployer-git" "–save"
+50 error cwd C:\Hexo\source\_posts\hexo-gutde-3
+51 error node -v v0.10.15
+52 error npm -v 1.4.3
+53 error type non_object_property_load
+54 verbose exit [ 1, true ]
