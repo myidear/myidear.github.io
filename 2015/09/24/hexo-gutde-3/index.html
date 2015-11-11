@@ -69,7 +69,7 @@
 阮一峰 - 喜欢写Blog的人，会经历三个阶段
 
 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间">
-<meta property="og:updated_time" content="2015-11-09T12:02:12.000Z">
+<meta property="og:updated_time" content="2015-11-10T08:53:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo系列教程: (三)基于GitHub Page的Hexo搭建">
 <meta name="twitter:description" content="前言
@@ -318,17 +318,17 @@
 <p>可以看到此目录下的文件：<code>id_rsa</code>  <code>id_rsa.pub</code><br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cat id_rsa.pub</span><br></pre></td></tr></table></figure></p>
 <p>如图所示：将文件内容全部复制下来<br><br>登陆<strong><a href="http://www.github.com/" target="_blank" rel="external">GitHub</a></strong>官网: Account Settings —&gt; SSH keys —&gt; Add SSH keys<br>如图所示：<br></p>
 <h3 id="4-_测试是否成功">4. 测试是否成功</h3><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh -<span class="constant">T</span> git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure>
-<p>如果是以下提示：“Hi iyannik0215! You’ve successfully authenticated, but GitHub does not provide shell access.”<br>证明你配置成功了。</p>
-<h3 id="5-_设置用户信息">5. 设置用户信息</h3><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="keyword">global</span> user.name <span class="string">"iyannik0215"</span>   <span class="preprocessor">#GitHub用户名</span></span><br><span class="line">$ git config --<span class="keyword">global</span> user.email  <span class="string">"iyannik0215@gmail.com"</span>   <span class="preprocessor">#填写自己的邮箱</span></span><br></pre></td></tr></table></figure>
+<p>如果是以下提示：“Hi myidear! You’ve successfully authenticated, but GitHub does not provide shell access.”<br>证明你配置成功了。</p>
+<h3 id="5-_设置用户信息">5. 设置用户信息</h3><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="keyword">global</span> user.name <span class="string">"myidear"</span>   <span class="preprocessor">#GitHub用户名</span></span><br><span class="line">$ git config --<span class="keyword">global</span> user.email  <span class="string">"myidear@gmail.com"</span>   <span class="preprocessor">#填写自己的邮箱</span></span><br></pre></td></tr></table></figure>
 <p>至此配置GitHub就已经完成了</p>
 <hr>
 <h1 id="使用GitHub_Pages建立博客">使用GitHub Pages建立博客</h1><hr>
 <p>GitHub Pages分两种，一种是你的GitHub用户名建立的username.github.io这样的用户&amp;组织页（站），另一种是依附项目的pages。</p>
 <p>想建立个人博客是用的第一种，形如cnfeat.github.io这样的可访问的站，每个用户名下面只能建立一个。</p>
-<h2 id="GitHub上建立仓库">GitHub上建立仓库</h2><p>点击：New repository<br><br>Repository name 的填写格式：<strong>Git用户名.github.io</strong><br><em>EG: iyannik0215.github.io</em><br></p>
+<h2 id="GitHub上建立仓库">GitHub上建立仓库</h2><p>点击：New repository<br><br>Repository name 的填写格式：<strong>Git用户名.github.io</strong><br><em>EG: myidear.github.io</em><br></p>
 <hr>
 <h1 id="配置Hexo进行一键部署安装">配置Hexo进行一键部署安装</h1><hr>
-<p>配置 <strong>Hexo目录</strong>下的 <em>_config.yml</em><br><figure class="highlight crmsh"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置信息：后必须有一个空格</span></span><br><span class="line"><span class="comment"># Site</span></span><br><span class="line">title: 叶阳栩宁's Blog          <span class="comment"># 网站标题</span></span><br><span class="line">subtitle: 随心 随笔             <span class="comment"># 简介</span></span><br><span class="line">description: 随心 随笔          <span class="comment"># 描述  </span></span><br><span class="line">author: 叶阳栩宁                <span class="comment"># 网站作者</span></span><br><span class="line">language: default               <span class="comment"># 网站语言</span></span><br><span class="line">email: iyannik0215@gmail.com    </span><br><span class="line">timezone: Asia/Hong_Kong        <span class="comment">#时区</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="operator">type</span>: git     <span class="comment"># 部署的位置  写git</span></span><br><span class="line">  repository: git@github.com:iyannik0215/iyannik0215.github.io.git</span><br><span class="line">  <span class="comment"># 这里填写项目的地址 git@github.com:Git用户名/Git用户名.github.io.git 参照上面</span></span><br><span class="line">  branch: <span class="keyword">master</span>    <span class="title"># 分支选择 master</span></span><br></pre></td></tr></table></figure></p>
+<p>配置 <strong>Hexo目录</strong>下的 <em>_config.yml</em><br><figure class="highlight crmsh"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置信息：后必须有一个空格</span></span><br><span class="line"><span class="comment"># Site</span></span><br><span class="line">title: 国庆's Blog          <span class="comment"># 网站标题</span></span><br><span class="line">subtitle: 随心 随笔             <span class="comment"># 简介</span></span><br><span class="line">description: 随心 随笔          <span class="comment"># 描述  </span></span><br><span class="line">author: 国庆                <span class="comment"># 网站作者</span></span><br><span class="line">language: default               <span class="comment"># 网站语言</span></span><br><span class="line">email: myidear@gmail.com    </span><br><span class="line">timezone: Asia/Hong_Kong        <span class="comment">#时区</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="operator">type</span>: git     <span class="comment"># 部署的位置  写git</span></span><br><span class="line">  repository: git@github.com:iyannik0215/iyannik0215.github.io.git</span><br><span class="line">  <span class="comment"># 这里填写项目的地址 git@github.com:Git用户名/Git用户名.github.io.git 参照上面</span></span><br><span class="line">  branch: <span class="keyword">master</span>    <span class="title"># 分支选择 master</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <h1 id="开始使用">开始使用</h1><hr>
 <p>先进入 <strong>Hexo</strong>目录，在文件夹任意地方右键 <em>Git Bash Here</em></p>
@@ -466,14 +466,14 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">分类</span>
               
           </div>

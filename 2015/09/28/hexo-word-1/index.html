@@ -1,0 +1,735 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Blog,Css,Html,教程," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="这张主要讲解一下bootstrap2.0的栅格系统、布局。
+全局设置必须使用html5文档类型Bootstrap使用的某些HTML元素和CSS属性需要文档类型为HTML5 doctype。因此这一文档类型必须出现在项目的每个页面的开始部分。1234&amp;lt;DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;	...&amp;lt;/html&amp;gt;
+排版和链接Bootstrap 为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bootstrap2.0基础教程">
+<meta property="og:url" content="http://yoursite.com/2015/09/28/hexo-word-1/index.html">
+<meta property="og:site_name" content="国庆's Blog">
+<meta property="og:description" content="这张主要讲解一下bootstrap2.0的栅格系统、布局。
+全局设置必须使用html5文档类型Bootstrap使用的某些HTML元素和CSS属性需要文档类型为HTML5 doctype。因此这一文档类型必须出现在项目的每个页面的开始部分。1234&amp;lt;DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;	...&amp;lt;/html&amp;gt;
+排版和链接Bootstrap 为">
+<meta property="og:image" content="http://yoursite.com/2015/09/28/hexo-word-1/Hexo0.png">
+<meta property="og:image" content="http://yoursite.com/2015/09/28/hexo-word-1/Hexo1.png">
+<meta property="og:image" content="http://yoursite.com/2015/09/28/hexo-word-1/Hexo2.png">
+<meta property="og:image" content="http://yoursite.com/2015/09/28/hexo-word-1/Hexo3.png">
+<meta property="og:image" content="http://yoursite.com/2015/09/28/hexo-word-1/Hexo5.png">
+<meta property="og:image" content="http://yoursite.com/2015/09/28/hexo-word-1/Hexo4.png">
+<meta property="og:updated_time" content="2015-11-11T01:15:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bootstrap2.0基础教程">
+<meta name="twitter:description" content="这张主要讲解一下bootstrap2.0的栅格系统、布局。
+全局设置必须使用html5文档类型Bootstrap使用的某些HTML元素和CSS属性需要文档类型为HTML5 doctype。因此这一文档类型必须出现在项目的每个页面的开始部分。1234&amp;lt;DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;	...&amp;lt;/html&amp;gt;
+排版和链接Bootstrap 为">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> Bootstrap2.0基础教程 | 国庆's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?59473d3db56fc7221c7fb98836c21b9f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">国庆's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">随心 随笔</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Bootstrap2.0基础教程
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-09-28T20:06:00+08:00" content="2015-09-28">
+              2015-09-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/bootstrap-css框架/" itemprop="url" rel="index">
+                    <span itemprop="name">bootstrap.css框架</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/09/28/hexo-word-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/28/hexo-word-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>这张主要讲解一下bootstrap2.0的栅格系统、布局。</p>
+<h1 id="全局设置">全局设置</h1><h2 id="必须使用html5文档类型">必须使用html5文档类型</h2><p>Bootstrap使用的某些HTML元素和CSS属性需要文档类型为HTML5 doctype。因此这一文档类型必须出现在项目的每个页面的开始部分。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">	...</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="排版和链接">排版和链接</h2><p>Bootstrap 为屏幕、排版和链接设置了基本的全局样式。尤其是，我们:<br>移除了body的 margin<br>设置了 body 的背景颜色 background-color: white;<br>使用 @baseFontFamily、@baseFontSize 和@baseLineHeight 属性作为我们排版的基础<br>通过 @linkColor 设置全局链接颜色，并且，当链接处于 :hover 状态时才会带有下划线<br>这些样式可以在 scaffolding.less 文件中找到。</p>
+<h2 id="用Normalize重置样式">用Normalize重置样式</h2><p>从 Bootstrap 2 开始, 老的重置方式被 Normalize.css 取代, 这是 Nicolas Gallagher 和Jonathan Neal 共同维护的一个项目，这一项目还被 HTML5 Boilerplate 所采用。虽然我们在reset.less 文件中使用了许多Normalize的代码，但是，我们也移除了一些不适合Bootstrap的元素。</p>
+<h1 id="默认栅格系统">默认栅格系统</h1><h2 id="栅格系统视例">栅格系统视例</h2><p>Bootstrap默认的栅格系统为12列 ，形成一个940px宽的容器，默认没有启用 响应式布局特性 。如果加入响应式布局CSS文件，栅格系统会自动根据可视窗口的宽度从724px到1170px进行动态调整。在可视窗口低于767px宽的情况下，列将不再固定并且会在垂直方向堆叠。<br><img src="/2015/09/28/hexo-word-1/Hexo0.png" alt="Hexo0.png" title=""></p>
+<h2 id="带有基本栅格的HTML代码">带有基本栅格的HTML代码</h2><p>对于简单的两列式布局，创建一个 .row 容器，并在容器中加入合适数量的 .span<em> 列即可。由于默认是12列的栅格，所有 .span</em> 列所跨越的栅格数之和最多是12(或者等于其父容器的栅格数)。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"row"</span>&gt;</span><br><span class="line">  &lt;div class=<span class="string">"span4"</span>&gt;...&lt;/div&gt;</span><br><span class="line">  &lt;div class=<span class="string">"span8"</span>&gt;...&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>上面的代码展示了 .span4 和 .span8 两列，两列的和总共是12个栅格。</p>
+<h2 id="偏移列">偏移列</h2><p>把列向右移动可使用 .offset* 类。每个类都给列的左边距增加了指定单位的列。例如，.offset4 将 .span4 右移了4个列的宽度。<br><img src="/2015/09/28/hexo-word-1/Hexo1.png" alt="Hexo1.png" title=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"row"</span>&gt;</span><br><span class="line">  &lt;div class=<span class="string">"span4"</span>&gt;...&lt;/div&gt;</span><br><span class="line">  &lt;div class=<span class="string">"span3 offset2"</span>&gt;...&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h1 id="流式栅格系统">流式栅格系统</h1><p>流式栅格系统对每一列的宽度使用百分比而不是像素数量。它和固定栅格系统一样拥有响应式布局的能力，这就保证它能对不同的分辨率和设备做出适当的调整。详细介绍可到<a href="http://v2.bootcss.com/" target="_blank" rel="external">bootstrap官网</a></p>
+<h1 id="响应式设计">响应式设计</h1><h2 id="启用响应式特性">启用响应式特性</h2><p>通过在文档中的 <head> 标签里添加合适的meta标签并引入一个额外的样式表即可启用响应式CSS。如果你已经在定制页面编译好一个Bootstrap, 那么只需添加一个meta标签。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br><span class="line">&lt;link href=<span class="string">"assets/css/bootstrap-responsive.css"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br></pre></td></tr></table></figure></head></p>
+<blockquote>
+<p>注意！ Bootstrap在默认情况下是没有引入响应式特性的，因为不是任何情况都需要使用到。我们并不是鼓励开发者移除此功能, 而是在需要使用的时候才启用它。</p>
+</blockquote>
+<h1 id="关于响应式Bootstrap">关于响应式Bootstrap</h1><blockquote>
+<p>Media queries允许在一些条件基础上自定义CSS 例如：—ratios、widths、display type, etc— 但通常都是围绕着 min-width 和 max-width 这两者。</p>
+<blockquote>
+<p>修改栅格系统中列的宽度<br>    需要的时候, 用堆叠元素代替浮动<br>    调整标题和文本的大小以便适合各种设备</p>
+</blockquote>
+<p>谨慎的使用media queries，先从你的手机用户开始吧。对于大型的项目, 应该考虑使用专门的代码库, 而不是构筑在media queries之上。</p>
+</blockquote>
+<h2 id="被支持的设备">被支持的设备</h2><p>Bootstrap 所支持的几个media queries都放在了一个文件中， 可以让你的项目更灵活的去适应不同设备和屏幕分辨率。包括：<br><img src="/2015/09/28/hexo-word-1/Hexo2.png" alt="Hexo2.png" title=""></p>
+<h2 id="响应式布局辅助class">响应式布局辅助class</h2><p>为了更快的针对移动设备做开发, 下面列出的辅助class用于针对不同设备显示和隐藏内容。下表是可用的class列表, 以及它们在各个media query布局下的效果。这些class可以在 responsive.less 文件中找到。<br><img src="/2015/09/28/hexo-word-1/Hexo3.png" alt="Hexo3.png" title=""></p>
+<h2 id="何时使用">何时使用</h2><p>在有限的情况下使用, 避免创建同一个站点的不同版本。当这些class能对每种设备的展示做有益的补充的时候才使用。响应式工具不能用于table元素，而且本就不支持。</p>
+<h2 id="响应式工具测试案例">响应式工具测试案例</h2><p>调整浏览器的宽度或者在不同的设备上加载该页面用以测试上述的class。</p>
+<h2 id="在…上显示">在…上显示</h2><p>绿色选中标记用以指示这些class在你当前的可视窗口是可见的。<br><img src="/2015/09/28/hexo-word-1/Hexo5.png" alt="Hexo5.png" title=""></p>
+<h2 id="在…上隐藏">在…上隐藏</h2><p>这里的绿色选中标记用以指示这些class在你当前的可视窗口是隐藏的。<br><img src="/2015/09/28/hexo-word-1/Hexo4.png" alt="Hexo4.png" title=""></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Blog/" rel="tag">#Blog</a>
+          
+            <a href="/tags/Css/" rel="tag">#Css</a>
+          
+            <a href="/tags/Html/" rel="tag">#Html</a>
+          
+            <a href="/tags/教程/" rel="tag">#教程</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/28/hexo-word-4/" rel="next" title="Bootstrap-4.0.0alpha案列">
+                <i class="fa fa-chevron-left"></i> Bootstrap-4.0.0alpha案列
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/09/28/hexo-word-2/" rel="prev" title="Bootstrap-4.0.0alpha入门">
+                Bootstrap-4.0.0alpha入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/09/28/hexo-word-1/"
+     data-title="Bootstrap2.0基础教程"
+     data-content=""
+     data-url="http://yoursite.com/2015/09/28/hexo-word-1/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/09/28/hexo-word-1/"
+           data-title="Bootstrap2.0基础教程" data-url="http://yoursite.com/2015/09/28/hexo-word-1/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/guoqing.png" alt="国庆" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">国庆</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">随心 随笔</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#全局设置"><span class="nav-number">1.</span> <span class="nav-text">全局设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#必须使用html5文档类型"><span class="nav-number">1.1.</span> <span class="nav-text">必须使用html5文档类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排版和链接"><span class="nav-number">1.2.</span> <span class="nav-text">排版和链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用Normalize重置样式"><span class="nav-number">1.3.</span> <span class="nav-text">用Normalize重置样式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#默认栅格系统"><span class="nav-number">2.</span> <span class="nav-text">默认栅格系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#栅格系统视例"><span class="nav-number">2.1.</span> <span class="nav-text">栅格系统视例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#带有基本栅格的HTML代码"><span class="nav-number">2.2.</span> <span class="nav-text">带有基本栅格的HTML代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏移列"><span class="nav-number">2.3.</span> <span class="nav-text">偏移列</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流式栅格系统"><span class="nav-number">3.</span> <span class="nav-text">流式栅格系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#响应式设计"><span class="nav-number">4.</span> <span class="nav-text">响应式设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#启用响应式特性"><span class="nav-number">4.1.</span> <span class="nav-text">启用响应式特性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于响应式Bootstrap"><span class="nav-number">5.</span> <span class="nav-text">关于响应式Bootstrap</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#被支持的设备"><span class="nav-number">5.1.</span> <span class="nav-text">被支持的设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式布局辅助class"><span class="nav-number">5.2.</span> <span class="nav-text">响应式布局辅助class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#何时使用"><span class="nav-number">5.3.</span> <span class="nav-text">何时使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式工具测试案例"><span class="nav-number">5.4.</span> <span class="nav-text">响应式工具测试案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在…上显示"><span class="nav-number">5.5.</span> <span class="nav-text">在…上显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在…上隐藏"><span class="nav-number">5.6.</span> <span class="nav-text">在…上隐藏</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">国庆</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"idear"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
